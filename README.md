@@ -11,26 +11,16 @@ Voyage Project - Learning Path Generator
 
 ## Overview
 
-Hi, Chingus!
-
-You've probably seen or played Wordle — the word-guessing game that took the
-internet by storm. In Wordle, players try to guess a hidden five-letter word in
-six tries or fewer. After each guess, the game gives you color-coded hints
-showing which letters are correct, which are in the wrong spot, and which
-aren't in the word at all.
-
-In this Voyage, your team will design and build your own version of the Wordle
-word game as a web application. This is a great project because it combines
-**logic**, **user interface design**, and **teamwork** — all skills you'll use
-throughout your career as a web developer or UI/UX designer.
-
-Your goal is to create an app that is fun to use, easy to understand, and
-something you'll be proud to show off in your portfolio!
-
-> **New to Wordle?** You can try the original game at
-> [nytimes.com/games/wordle](https://www.nytimes.com/games/wordle/index.html)
-> to get a feel for how it works before you start building.
-
+Hi, Chingus! 👋
+ 
+You've probably had that moment of staring at a new career goal and wondering: *where do I even start?* Whether it's breaking into web development, leveling up to a senior engineer, or pivoting into data science, the sheer number of tutorials, courses, and roadmaps out there can be overwhelming.
+ 
+In this Voyage, your team will design and build a **Learning Path Generator** — a web application that uses AI to turn a person's career goals into a clear, personalized, step-by-step learning journey. Instead of guessing which skills to learn next, users will get a tailored path that adapts to where they are and where they want to go.
+ 
+This is a great project because it combines thoughtful prompt engineering, full-stack development, and UI/UX design — all skills you'll use throughout your career as a web developer. You'll work with AI APIs to generate meaningful, structured content, design an interface that makes complex information easy to navigate, and collaborate as a team to bring it all together.
+ 
+Your goal is to create an app that's genuinely useful, easy to understand, and something you'll be proud to show off in your portfolio!
+ 
 ## General Instructions
 
 This project is designed to be worked on by a **team** rather than an
