@@ -194,7 +194,7 @@ the voyage — without them, the app isn't really a Learning Path Generator!
 
 
  ## Stretch Goals
- Once you complete the basic application, you may enhance it with any of the following optional stretch goals. Make sure that any of these you choose matches the capabilities of your team.
+Once you complete the basic application, you may enhance it with any of the following optional stretch goals. Make sure that any of these you choose matches the capabilities of your team.
 
 > These features are designed with **Tier 2** and **Tier 3** skill levels in
 > mind, but any team is welcome to try them. Make sure to add acceptance
@@ -202,86 +202,86 @@ the voyage — without them, the app isn't really a Learning Path Generator!
 
   * [ ] Authenticate users via Google or Github to enhance your app's security.
   * [ ] Allow users to switch between light and dark mode.
-  * [ ] Integrate AI into your app to provide users with hints. The 
-[Gemini Flash 1.5 free tier](https://ai.google.dev/pricing#1_5flash) is sufficient for this.
+  * [ ] Integrate AI into your app to provide users with **follow-up Q&A** on
+    any step in their path (e.g., "Why do I need to learn this?" or "Suggest
+    an alternative resource"). The
+    [Gemini Flash 1.5 free tier](https://ai.google.dev/pricing#1_5flash) is
+    sufficient for this.
 
-##### Enhanced Gameplay
+##### Enhanced Path Generation
 
-* [ ] **Hard Mode** — Once a letter is confirmed as correct (green) or present
-  (yellow), the player must use that letter in all future guesses. Add a
-  toggle in the settings to turn Hard Mode on or off.
-* [ ] **Different Word Lengths** — Allow the player to choose to play with
-  4-letter, 5-letter, or 6-letter words instead of always using 5 letters.
-  The game board and keyboard should adjust accordingly.
-* [ ] **Word Categories** — Let the player choose a category (e.g., Animals,
-  Foods, Countries) and pull the secret word only from words in that category.
-* [ ] **Daily Word Mode** — Instead of a random word every game, use a set
-  schedule so all players get the same word on the same day (just like the
-  original Wordle). This requires a deterministic word-selection method based
-  on the current date.
-* [ ] **Guess Validation Against a Word List** — Reject guesses that are not in a
-  dictionary word list, showing the player a message like "Not in word list."
-  This makes the game more challenging and closer to the original.
+* [ ] **Skill Assessment Quiz** — Before generating a path, offer the user a
+  short quiz to more accurately gauge their current skill level instead of
+  relying on self-reported input.
+* [ ] **Multiple Path Variations** — Generate 2–3 different path options (e.g.,
+  "Fast Track," "Balanced," "In-Depth") based on the same goal, and let the
+  user pick the one that fits their pace.
+* [ ] **Resource Recommendations** — For each step in the path, have the AI
+  suggest specific free or paid resources (courses, articles, videos,
+  documentation) rather than just a description.
+* [ ] **Prerequisite Detection** — Allow the AI to flag prerequisite knowledge
+  the user may be missing based on their stated background, and insert
+  foundational steps automatically.
+* [ ] **Regenerate a Single Step** — Let users regenerate or refine just one
+  step in the path (e.g., "make this step easier" or "give me a different
+  resource") without regenerating the entire path.
 
 ##### Animations & Visual Polish
 
-* [ ] Add **tile flip animations** when a row is revealed after a guess is
-  submitted, similar to the original Wordle.
-* [ ] Add a **shake animation** to the current row when an invalid guess is
-  submitted.
-* [ ] Add a **color theme** option, allowing the player to switch between a
-  **Light Mode** and a **Dark Mode** for the game interface. Save the player's
+* [ ] Add **smooth transition animations** when a step is marked complete or
+  when a new path is generated.
+* [ ] Add a **loading animation** (beyond a simple spinner) while the AI
+  generates the path, to make the wait feel more engaging.
+* [ ] Add a **color theme** option, allowing the user to switch between a
+  **Light Mode** and a **Dark Mode** for the app interface. Save the user's
   preference using `localStorage` so it persists between sessions.
-* [ ] Add a **High Contrast Mode** that uses different colors (e.g., orange and
-  blue instead of yellow and green) to improve accessibility for color-blind
-  players.
+* [ ] Add a **visual roadmap/timeline view** (e.g., a winding path or vertical
+  timeline with icons) as an alternative to the default list/card view.
 
-##### Statistics & Sharing
+##### Progress & Sharing
 
-* [ ] **Game Statistics Panel** — Track and display the player's stats across
-  multiple games, including:
-  * Total games played
-  * Win percentage
-  * Current win streak
-  * Best (longest) win streak
-  * Guess distribution (a bar chart showing how many games were won in 1
-    guess, 2 guesses, 3 guesses, etc.)
+* [ ] **Progress Dashboard** — Track and display the user's stats across
+  multiple learning paths, including:
+  * Total paths generated
+  * Total steps completed
+  * Current streak (consecutive days with a completed step)
+  * Overall completion percentage per path
   * Store the statistics in the browser using `localStorage` so they
     persist between sessions.
-* [ ] **Share Results** — After the game ends (win or lose), give the player a
-  **"Share"** button that copies a spoiler-free emoji grid of their results to
-  the clipboard. For example:
-  ```
-  Wordle 5/6
-  ⬜🟨⬜⬜⬜
-  ⬜⬜🟨⬜🟩
-  🟨⬜⬜🟨🟩
-  🟩🟩⬜🟩🟩
-  🟩🟩🟩🟩🟩
+* [ ] **Share Progress** — Give the user a **"Share"** button that generates a
+  shareable summary or image of their learning path progress (e.g.,
+  "I've completed 6/10 steps toward becoming a Frontend Developer! 🚀").
+* [ ] **Export Path** — Allow users to export their learning path as a PDF or
+  markdown checklist they can save or print.
 
 ##### Accessibility
 
-* [ ] Make the app fully **keyboard accessible** — every action (typing a letter,
-  submitting a guess, starting a new game, opening settings) should be
-  achievable without a mouse.
-* [ ] Add **screen reader support** by using proper ARIA labels and roles on the
-  game board tiles and keyboard keys, so that players who use assistive
-  technology can understand the game state.
+* [ ] Make the app fully **keyboard accessible** — every action (submitting the
+  form, marking a step complete, generating a new path, opening settings)
+  should be achievable without a mouse.
+* [ ] Add **screen reader support** by using proper ARIA labels and roles on
+  form inputs, step cards, and progress indicators, so that users who use
+  assistive technology can understand and interact with the app.
 
 ##### Responsive Design
 
-* [ ] Ensure the full game is **fully playable on mobile devices** (small
-  touchscreens), not just desktop browsers. The layout should adapt cleanly
-  to narrow viewports.
+* [ ] Ensure the full app is **fully usable on mobile devices** (small
+  touchscreens), not just desktop browsers. The roadmap/step layout should
+  adapt cleanly to narrow viewports.
 
 ##### Backend / Full-Stack (Tier 3)
 
 * [ ] Build a **backend server** (e.g., using Node.js/Express) to:
-  * Serve the word list from a database instead of a hardcoded frontend array.
-  * Store and retrieve **player statistics** server-side, so they persist
-    across devices and browsers.
-* [ ] Implement **user authentication** (e.g., via GitHub OAuth or Google Sign-In)
-  so players can log in and access their personal stats from any device.
+  * Store generated learning paths in a database instead of only in local
+    browser storage.
+  * Store and retrieve **user progress** server-side, so it persists across
+    devices and browsers.
+* [ ] Implement **user authentication** (e.g., via GitHub OAuth or Google
+  Sign-In) so users can log in and access their saved learning paths from any
+  device.
+* [ ] Allow users to **save multiple learning paths** (e.g., one for "Frontend
+  Developer" and another for "Data Analyst") and switch between them from a
+  dashboard.
 
 
 ## Acceptance Criteria
