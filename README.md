@@ -131,73 +131,66 @@ team's style or consistency, don't forget to keep intuitive gameplay in mind.
   You can surprise us by adding more as your team decides.
 
 ### Basic Requirements (MVP)
-
 These are the features your app **must** include. Think of them as the rules of
-the game — without them, the app isn't really Wordle!
+the game — without them, the app isn't really a Learning Path Generator!
 
-##### Game Setup
+##### User Input
+* [ ] The app must provide a **form or input flow** where the user can enter their
+  career goal (e.g., "Frontend Developer," "Data Scientist," "UX Designer").
+* [ ] The app must collect at least a few pieces of context to personalize the path, such as:
+  * The user's **current skill level** (e.g., Beginner, Intermediate, Advanced).
+  * Any **relevant background or existing skills** (free text or a short list).
+  * A **time commitment or timeframe** (e.g., "5 hours/week," "3 months").
+* [ ] The app must validate user input before submission — for example, the
+  career goal field should not be left empty.
+* [ ] Input fields should have clear labels and placeholder text so users know
+  what kind of information to enter.
 
-* [ ] The app must have a built-in list of valid **five-letter English words**.
-  * At the start of each game, the app randomly selects one word from this
-    list as the **secret word** for the player to guess.
-  * The word list must contain **at least 500 words**. You can find free,
-    publicly available word lists online (for example, the list used by the
-    original NYT Wordle is publicly available).
-  * The word list should only include **common English words** that a typical
-    9th-grade student would know (avoid extremely rare, offensive, or obscure
-    words).
+##### AI-Powered Path Generation
+* [ ] The app must send the user's input to an **AI API** (e.g., OpenAI, Anthropic,
+  or similar) to generate a personalized learning path.
+* [ ] The generated learning path must be broken down into **clear, sequential
+  steps or milestones** (not just a wall of text).
+* [ ] Each step in the path must include, at minimum:
+  * A **title** (e.g., "Learn HTML & CSS Basics").
+  * A short **description** of what the step covers and why it matters.
+  * An **estimated time** to complete the step.
+* [ ] While the AI request is processing, the app must display a **loading state**
+  (e.g., spinner or "Generating your path...") so the user knows the app is working.
+* [ ] The app must handle and gracefully display an error if the AI request fails
+  (e.g., "Something went wrong generating your path. Please try again.").
 
-##### Gameplay
+##### Displaying the Learning Path
+* [ ] The generated path must be displayed in a **clear, organized format** — for
+  example, a vertical roadmap, a numbered list, or a series of cards.
+* [ ] Each step must be **visually distinct** so users can easily tell one
+  milestone from the next.
+* [ ] The path should clearly show **progression/order** (e.g., numbered steps,
+  connecting lines, or a progress bar).
 
-* [ ] The player has **6 attempts** to guess the secret word.
-* [ ] Each guess must be a valid **five-letter word**. The app should not accept
-  guesses that are fewer or more than 5 letters.
-* [ ] After each guess is submitted, the app must give the player
-  **color-coded feedback** for each letter in their guess. Examples from the existing game are:
-  * 🟩 **Green** — The letter is in the secret word AND is in the correct position.
-  * 🟨 **Yellow** — The letter is in the secret word BUT is in the wrong position.
-  * ⬜ **Gray** — The letter is NOT in the secret word at all.  
-* [ ] The feedback must be displayed on a **game board** (a grid of rows and tiles)
-  that shows all previous guesses and their color-coded results.
-* [ ] The game board must show all 6 rows at once, with empty tiles for guesses
-  that haven't been made yet.
+##### Tracking Progress
+* [ ] Users must be able to **mark a step as complete** (e.g., checking it off).
+* [ ] Completed steps must be **visually marked** as done (e.g., checkmark,
+  strikethrough, or color change) so progress is easy to see at a glance.
+* [ ] The app must display an overall **progress indicator** (e.g., "3 of 8 steps
+  completed" or a progress bar) that updates as steps are checked off.
 
-##### On-Screen Keyboard
-
-* [ ] The app must display an **on-screen keyboard** (A–Z) that the player can
-  click or tap to enter letters.
-* [ ] As the player makes guesses, the on-screen keyboard must **update the color
-  of each letter key** to reflect the best hint received for that letter so far:
-  * Green if the letter has been confirmed in the correct position.
-  * Yellow if the letter is in the word but in the wrong position.
-  * Gray if the letter has been ruled out.
-  * Uncolored/default if the letter has not been guessed yet.
-* [ ] Players should also be able to type their guess using a **physical keyboard**,
-  in addition to using the on-screen keyboard.
-
-##### Winning and Losing
-
-* [ ] If the player guesses the secret word correctly, the app must:
-  * Display a **congratulations message** that tells the player they won.
-  * Show the player how many guesses it took (e.g., "You got it in 4 tries!").
-* [ ] If the player uses all 6 guesses without finding the word, the app must:
-  * Display a **game over message** that reveals the correct secret word.
-* [ ] After winning or losing, the player must be given the option to **start a
-  new game** with a new random secret word.
+##### Regenerating & Starting Over
+* [ ] After a path is generated, the user must have the option to **generate a
+  new path** with different input (new goal, skill level, etc.).
+* [ ] The app must clear or replace the old path when a new one is generated, so
+  the user isn't looking at stale data.
 
 ##### Input Validation & Error Handling
-
-* [ ] The app should only accept 5-letter words as guesses. If the player tries to
-  submit a guess that is not 5 letters long, display a clear message telling
-  them why the guess was not accepted.
-* [ ] *(Optional for MVP, encouraged for stretch):* Validate that the guessed word
-  is a real word from the word list. If the player submits a random string of
-  letters that isn't a real word, inform them.
+* [ ] The app should not allow users to submit the form with missing required
+  fields (e.g., no career goal entered). Display a clear message explaining
+  what's missing.
 * [ ] Error messages must be clear and helpful, not just "Error." For example:
-  "That word isn't in our word list. Try another word!"
-* [ ] Error messages should disappear or be cleared once the player corrects their
+  "Please enter a career goal before generating your path."
+* [ ] Error messages should disappear or be cleared once the user corrects their
   input.
-
+* [ ] If the AI returns an unexpected or malformed response, the app must handle
+  it gracefully rather than crashing or showing a blank screen.
 
 
  ## Stretch Goals
