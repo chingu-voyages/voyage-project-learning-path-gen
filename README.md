@@ -147,8 +147,7 @@ the voyage — without them, the app isn't really a Learning Path Generator!
   what kind of information to enter.
 
 ##### AI-Powered Path Generation
-* [ ] The app must send the user's input to an **AI API** (e.g., OpenAI, Anthropic,
-  or similar) to generate a personalized learning path.
+* [ ] The app must send the user's input to an **AI API** to generate a personalized learning path.
 * [ ] The generated learning path must be broken down into **clear, sequential
   steps or milestones** (not just a wall of text).
 * [ ] Each step in the path must include, at minimum:
@@ -169,6 +168,7 @@ the voyage — without them, the app isn't really a Learning Path Generator!
   connecting lines, or a progress bar).
 
 ##### Tracking Progress
+* [ ] This is a requirement for tier 2 and 3 chingus. Tier 1 chingus are welcome to try it as a stretch goal.
 * [ ] Users must be able to **mark a step as complete** (e.g., checking it off).
 * [ ] Completed steps must be **visually marked** as done (e.g., checkmark,
   strikethrough, or color change) so progress is easy to see at a glance.
