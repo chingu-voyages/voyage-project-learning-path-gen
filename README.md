@@ -132,7 +132,7 @@ team's style or consistency, don't forget to keep intuitive gameplay in mind.
 
 ### Basic Requirements (MVP)
 These are the features your app **must** include. Think of them as the rules of
-the game — without them, the app isn't really a Learning Path Generator!
+the voyage — without them, the app isn't really a Learning Path Generator!
 
 ##### User Input
 * [ ] The app must provide a **form or input flow** where the user can enter their
