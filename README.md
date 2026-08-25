@@ -202,7 +202,7 @@ Once you complete the basic application, you may enhance it with any of the foll
 
   * [ ] Authenticate users via Google or Github to enhance your app's security.
   * [ ] Allow users to switch between light and dark mode.
-  * [ ] Integrate AI into your app to provide users with **follow-up Q&A** on
+  * [ ] The app is already AI powered, use it to provide users with **follow-up Q&A** on
     any step in their path (e.g., "Why do I need to learn this?" or "Suggest
     an alternative resource"). The
     [Gemini Flash 1.5 free tier](https://ai.google.dev/pricing#1_5flash) is
