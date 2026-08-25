@@ -54,7 +54,7 @@ with free tiers you can use to deploy your app.
 ### What You Need to Do
 
 The sections below describe what your team needs to build. The
-**Basic Requirements** are the minimum features needed to have a working game
+**Basic Requirements** are the minimum features needed to have a working app
 (your MVP). The **Stretch Goals** are extra features for teams that finish
 early or want an extra challenge — they are completely optional.
 
