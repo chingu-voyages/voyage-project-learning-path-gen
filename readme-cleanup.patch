@@ -1,0 +1,295 @@
+diff --git a/README.md b/README.md
+index 852e976..28c8ebe 100644
+--- a/README.md
++++ b/README.md
+@@ -6,21 +6,22 @@ Voyage Project - Learning Path Generator
+ * [Overview](#overview)
+ * [General Instructions](#general-instructions)
+ * [Requirements & Specifications](#requirements-and-specifications)
++* [Stretch Goals](#stretch-goals)
++* [Acceptance Criteria](#acceptance-criteria)
+ * [Acknowledgements](#acknowledgements)
+ * [About Chingu](#about-chingu)
+ 
+ ## Overview
+ 
+ Hi, Chingus! 👋
+- 
++
+ You've probably had that moment of staring at a new career goal and wondering: *where do I even start?* Whether it's breaking into web development, leveling up to a senior engineer, or pivoting into data science, the sheer number of tutorials, courses, and roadmaps out there can be overwhelming.
+- 
++
+ In this Voyage, your team will design and build a **Learning Path Generator** — a web application that uses AI to turn a person's career goals into a clear, personalized, step-by-step learning journey. Instead of guessing which skills to learn next, users will get a tailored path that adapts to where they are and where they want to go.
+- 
++
+ This is a great project because it combines thoughtful prompt engineering, full-stack development, and UI/UX design — all skills you'll use throughout your career as a web developer. You'll work with AI APIs to generate meaningful, structured content, design an interface that makes complex information easy to navigate, and collaborate as a team to bring it all together.
+- 
++
+ Your goal is to create an app that's genuinely useful, easy to understand, and something you'll be proud to show off in your portfolio!
+- 
+ 
+ ## General Instructions
+ 
+@@ -40,13 +41,13 @@ A few things to keep in mind:
+ 
+ * **UI/UX creativity is yours to explore** — design an interface that stands
+   out while still being easy to use. There is no single "right" way for the
+-  game to look.
++  app to look.
+ * **No paid subscriptions or software are required** for this project. All
+   tools and resources you need are free.
+ * You may use AI for **research and learning**. However, you may ***NOT*** use
+   AI to write the code for your app. The code must be written by your team.
+ 
+-There are many [web hosting services](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/appdeployment.md) 
++There are many [web hosting services](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/appdeployment.md)
+ with free tiers you can use to deploy your app.
+ 
+ ## Requirements and Specifications
+@@ -60,7 +61,9 @@ early or want an extra challenge — they are completely optional.
+ 
+ > 📌 **Tier Note:** Basic Requirements are designed for **Tier 1** Voyagers
+ > (Beginner Frontend). Stretch Goals are designed with **Tier 2** and
+-> **Tier 3** Voyagers in mind, but any team is welcome to try them!
++> **Tier 3** Voyagers in mind, but any team is welcome to try them! A few
++> individual items below are called out as required only for specific tiers —
++> look for the tier note next to that item.
+ 
+ **Make sure you control the scope** so you'll be
+ able to complete the basic requirements by the end of the Voyage. Remember, you can always
+@@ -68,9 +71,8 @@ add optional items and enhancements once you've completed the basic app.
+ 
+ #### Structure
+ 
+-* [ ] This can be implemented as a frontend application for Tier 1 & Tier 2. Tier 3 teams should implement both a frontend and backend.
++* [ ] This can be implemented as a frontend application for Tier 1 & Tier 2. Tier 3 teams must implement both a frontend and a backend — see [Backend / Full-Stack](#backend--full-stack-required-for-tier-3) below for the minimum backend expectations.
+ * [ ] You may use any languages, tools, or libraries your team agrees on to design and build this app.
+-* [ ] You may use AI for research. But, you may **_NOT_** use it to create code for your app.
+ * [ ] Your app must be **deployed** to a hosting service so it can be accessed
+   through the Internet. Free hosting options include
+   [GitHub Pages](https://pages.github.com/),
+@@ -82,7 +84,7 @@ add optional items and enhancements once you've completed the basic app.
+ * [ ] Navigation options (as applicable)
+ 
+   * **Home** - displays the landing page when clicked
+-  * **Results** - displays results and any statistics that your team decides to track
++  * **Results** - displays the generated learning path, progress tracking, and any statistics your team decides to track
+ 
+ * [ ] Screens
+ 
+@@ -90,11 +92,13 @@ add optional items and enhancements once you've completed the basic app.
+ 
+     ![Landing Page Wireframe](./src/assets/Landing_Page_Wireframe.jpg)
+ 
+-    * Content that advertises the purpose of the app and it's benefits
++    * Content that advertises the purpose of the app and its benefits
++
++    **_Optional:_** user authentication is not required for the MVP — see [Stretch Goals](#stretch-goals) if your team wants to add it.
+ 
+-    **_Optional_** User authentication is not required, but you may add it if you wish.
++  * Results Screen (design is intentionally left open for your team to define — it should surface the generated path and, where applicable, progress tracking)
+ 
+- * [ ] User Interface and Experience (UI/UX)
++* [ ] User Interface and Experience (UI/UX)
+ 
+   * In general, you will find these [UI design principles](https://www.justinmind.com/ui-design/principles) helpful.
+   * If your team doesn't include a dedicated UI/UX Designer you will [find these tips](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)
+@@ -103,25 +107,18 @@ add optional items and enhancements once you've completed the basic app.
+ #### Styling
+ 
+ * [ ] Surprise us!!! Use your team's creativity to make this app distinctive.
+-* [ ] Colors within this description are examples from the existing game. If you choose alternative colors to fit your
+-team's style or consistency, don't forget to keep intuitive gameplay in mind.
+ * [ ] Your app should be **visually clean and easy to read**. Think about contrast,
+-  font size, and spacing so that all users can comfortably play the game.
++  font size, and spacing so that all users can comfortably use the app.
+ * [ ] Every page (or screen) should include:
+   * A **header** with the name of your app.
+   * A **footer** with a link to your team's GitHub repository.
+ * [ ] Your app should look good on both **desktop and mobile** screen sizes
+-  (responsive design). At minimum, the game should be fully playable on a
+-  standard desktop browser.
+-* [ ] Refer to these
+-  [UI design principles](https://www.justinmind.com/ui-design/principles) for
+-  guidance if your team doesn't have a dedicated UI/UX Designer.
++  (responsive design).
+ * [ ] If your team includes a UI/UX Designer, they should create wireframes for
+   each screen before the team starts coding. Refer to the Chingu Handbook's
+   [UI/UX tips](https://github.com/chingu-voyages/Handbook/blob/main/docs/resources/techresources/uiux.md)
+   for guidance.
+-* [ ] Add a footer containing a link to your team's GitHub repo.
+-* [ ] Recommend using this resource for [clean CSS](https://israelmitolu.hashnode.dev/writing-cleaner-css-using-bem-methodology).
++* [ ] Recommended resource for [clean CSS](https://israelmitolu.hashnode.dev/writing-cleaner-css-using-bem-methodology).
+ 
+ #### Functionality
+ 
+@@ -134,7 +131,7 @@ team's style or consistency, don't forget to keep intuitive gameplay in mind.
+ These are the features your app **must** include. Think of them as the rules of
+ the voyage — without them, the app isn't really a Learning Path Generator!
+ 
+-##### User Input
++#### User Input
+ * [ ] The app must provide a **form or input flow** where the user can enter their
+   career goal (e.g., "Frontend Developer," "Data Scientist," "UX Designer").
+ * [ ] The app must collect at least a few pieces of context to personalize the path, such as:
+@@ -146,7 +143,7 @@ the voyage — without them, the app isn't really a Learning Path Generator!
+ * [ ] Input fields should have clear labels and placeholder text so users know
+   what kind of information to enter.
+ 
+-##### AI-Powered Path Generation
++#### AI-Powered Path Generation
+ * [ ] The app must send the user's input to an **AI API** to generate a personalized learning path.
+ * [ ] The generated learning path must be broken down into **clear, sequential
+   steps or milestones** (not just a wall of text).
+@@ -159,7 +156,7 @@ the voyage — without them, the app isn't really a Learning Path Generator!
+ * [ ] The app must handle and gracefully display an error if the AI request fails
+   (e.g., "Something went wrong generating your path. Please try again.").
+ 
+-##### Displaying the Learning Path
++#### Displaying the Learning Path
+ * [ ] The generated path must be displayed in a **clear, organized format** — for
+   example, a vertical roadmap, a numbered list, or a series of cards.
+ * [ ] Each step must be **visually distinct** so users can easily tell one
+@@ -167,21 +164,20 @@ the voyage — without them, the app isn't really a Learning Path Generator!
+ * [ ] The path should clearly show **progression/order** (e.g., numbered steps,
+   connecting lines, or a progress bar).
+ 
+-##### Tracking Progress
+-* [ ] This is a requirement for tier 2 and 3 chingus. Tier 1 chingus are welcome to try it as a stretch goal.
++#### Tracking Progress *(Required for Tier 2 & 3; stretch goal for Tier 1)*
+ * [ ] Users must be able to **mark a step as complete** (e.g., checking it off).
+ * [ ] Completed steps must be **visually marked** as done (e.g., checkmark,
+   strikethrough, or color change) so progress is easy to see at a glance.
+ * [ ] The app must display an overall **progress indicator** (e.g., "3 of 8 steps
+   completed" or a progress bar) that updates as steps are checked off.
+ 
+-##### Regenerating & Starting Over
++#### Regenerating & Starting Over
+ * [ ] After a path is generated, the user must have the option to **generate a
+   new path** with different input (new goal, skill level, etc.).
+ * [ ] The app must clear or replace the old path when a new one is generated, so
+   the user isn't looking at stale data.
+ 
+-##### Input Validation & Error Handling
++#### Input Validation & Error Handling
+ * [ ] The app should not allow users to submit the form with missing required
+   fields (e.g., no career goal entered). Display a clear message explaining
+   what's missing.
+@@ -192,23 +188,23 @@ the voyage — without them, the app isn't really a Learning Path Generator!
+ * [ ] If the AI returns an unexpected or malformed response, the app must handle
+   it gracefully rather than crashing or showing a blank screen.
+ 
+-
+- ## Stretch Goals
++## Stretch Goals
+ Once you complete the basic application, you may enhance it with any of the following optional stretch goals. Make sure that any of these you choose matches the capabilities of your team.
+ 
+ > These features are designed with **Tier 2** and **Tier 3** skill levels in
+ > mind, but any team is welcome to try them. Make sure to add acceptance
+ > criteria to your repo's `README.md` for any stretch goals you implement.
+ 
+-  * [ ] Authenticate users via Google or Github to enhance your app's security.
+-  * [ ] Allow users to switch between light and dark mode.
+-  * [ ] The app is already AI powered, use it to provide users with **follow-up Q&A** on
+-    any step in their path (e.g., "Why do I need to learn this?" or "Suggest
+-    an alternative resource"). The
+-    [Gemini Flash 1.5 free tier](https://ai.google.dev/pricing#1_5flash) is
+-    sufficient for this.
++#### Account, Personalization & AI Q&A
++
++* [ ] Authenticate users via Google or GitHub to enhance your app's security.
++* [ ] The app is already AI powered — use it to provide users with **follow-up Q&A** on
++  any step in their path (e.g., "Why do I need to learn this?" or "Suggest
++  an alternative resource"). The
++  [Gemini Flash 1.5 free tier](https://ai.google.dev/pricing#1_5flash) is
++  sufficient for this.
+ 
+-##### Enhanced Path Generation
++#### Enhanced Path Generation
+ 
+ * [ ] **Skill Assessment Quiz** — Before generating a path, offer the user a
+   short quiz to more accurately gauge their current skill level instead of
+@@ -226,7 +222,7 @@ Once you complete the basic application, you may enhance it with any of the foll
+   step in the path (e.g., "make this step easier" or "give me a different
+   resource") without regenerating the entire path.
+ 
+-##### Animations & Visual Polish
++#### Animations & Visual Polish
+ 
+ * [ ] Add **smooth transition animations** when a step is marked complete or
+   when a new path is generated.
+@@ -238,7 +234,7 @@ Once you complete the basic application, you may enhance it with any of the foll
+ * [ ] Add a **visual roadmap/timeline view** (e.g., a winding path or vertical
+   timeline with icons) as an alternative to the default list/card view.
+ 
+-##### Progress & Sharing
++#### Progress & Sharing
+ 
+ * [ ] **Progress Dashboard** — Track and display the user's stats across
+   multiple learning paths, including:
+@@ -254,7 +250,7 @@ Once you complete the basic application, you may enhance it with any of the foll
+ * [ ] **Export Path** — Allow users to export their learning path as a PDF or
+   markdown checklist they can save or print.
+ 
+-##### Accessibility
++#### Accessibility
+ 
+ * [ ] Make the app fully **keyboard accessible** — every action (submitting the
+   form, marking a step complete, generating a new path, opening settings)
+@@ -263,13 +259,13 @@ Once you complete the basic application, you may enhance it with any of the foll
+   form inputs, step cards, and progress indicators, so that users who use
+   assistive technology can understand and interact with the app.
+ 
+-##### Responsive Design
++#### Responsive Design
+ 
+ * [ ] Ensure the full app is **fully usable on mobile devices** (small
+   touchscreens), not just desktop browsers. The roadmap/step layout should
+   adapt cleanly to narrow viewports.
+ 
+-##### Backend / Full-Stack (Tier 3)
++#### Backend / Full-Stack *(Required for Tier 3)*
+ 
+ * [ ] Build a **backend server** (e.g., using Node.js/Express) to:
+   * Store generated learning paths in a database instead of only in local
+@@ -283,7 +279,6 @@ Once you complete the basic application, you may enhance it with any of the foll
+   Developer" and another for "Data Analyst") and switch between them from a
+   dashboard.
+ 
+-
+ ## Acceptance Criteria
+ 
+ Your finished project should meet all of the following minimum standards:
+@@ -291,21 +286,22 @@ Your finished project should meet all of the following minimum standards:
+ * [ ] Your GitHub repo contains a well-written `README.md` that includes a link
+   to your deployed app, a description of the project, and the names/GitHub
+   profiles of all team members.
+-* [ ] The deployed app is accessible and fully playable in a modern web browser
++* [ ] The deployed app is accessible and fully usable in a modern web browser
+   without any console errors.
+-* [ ] The game board correctly displays color-coded feedback (green, yellow, gray)
+-  for each letter in every guess.
+-* [ ] The on-screen keyboard updates letter colors to reflect hints received.
+-* [ ] The game correctly identifies when the player has won or lost and displays
+-  the appropriate message.
+-* [ ] The player is always given the option to start a new game after a game ends.
+-* [ ] Input validation prevents invalid guesses from being submitted, and error
+-  messages are clear and helpful.
++* [ ] The form validates required input (e.g., career goal) before submission,
++  and displays clear, specific error messages when input is missing or invalid.
++* [ ] The generated learning path is displayed in a clear, organized format with
++  each step visually distinct and progression/order clearly indicated.
++* [ ] A loading state is shown while the AI request is processing, and a clear
++  error message is shown if the AI request fails.
++* [ ] *(Tier 2 & 3)* Users can mark steps complete, completed steps are visually
++  marked, and an overall progress indicator updates accordingly.
++* [ ] Users can regenerate a new path with different input, and the old path is
++  cleared or replaced rather than left on screen alongside the new one.
+ * [ ] The UI is responsive and usable on both desktop and mobile screen sizes.
+ * [ ] If your team implemented any stretch goals, add their acceptance criteria
+   directly to your repo's `README.md`.
+ 
+-
+ ## Acknowledgements
+ 
+ We would like to express our profound gratitude to the global developer
